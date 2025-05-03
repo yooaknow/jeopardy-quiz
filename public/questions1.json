@@ -1,0 +1,352 @@
+[
+  {
+    "name": "KPOP 가사 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "Cos ah ah\nI’m in the stars tonight\nSo watch me bring the fire\nand set the night alight",
+        "answer": "[방탄소년단 (BTS)] Dynamite",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "When we pull up you know\nit’s a shutdown\n간판 내리고 문 잠가 shut down",
+        "answer": "[블랙핑크 (BLACKPINK)] Shut down",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "Monday Tuesday Wednesday\nThursday Friday Saturday Sunday\nMonday Tuesday Wednesday\nThursday Friday\nSeven days a week",
+        "answer": "[정국 (JUNGKOOK] Seven (feat. Latto)",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "Whooooooo wanna rock with Jennie\nKeep you hair done, nails done like Jennie\nWho else got ’em obsessed like Jennie\nLike like like",
+        "answer": "[제니 (JENNIE)] like JENNIE",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "Baby Girl! Too bad for me\nThere you go! Toot that! As for me?\nAll I want! Is in arms’ reach\nBreak me off! Passionately",
+        "answer": "[G-DRAGON] TOO BAD (feat. Anderson .Paak)",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "팝송 가사 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "Here's to the ones that we got\nCheers to the wish you\nwere here but you're not\n'Cause the drinks bring\nback all the memories",
+        "answer": "[Maroon 5] Memories",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "So go ahead and drive me insane\nBaby run your mouth\nI still wouldn't change\nBeing stuck with you",
+        "answer": "[Ariana Grande, Justin Bieber] Stuck with U",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "If the world was ending\nI'd wanna be next to you",
+        "answer": "[Lady Gaga, Bruno Mars] Die With A Smile",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "Oh I hope I don’t lose you\nMmm\nPlease\nStay",
+        "answer": "[Benson Boone] Beautiful Things",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "Anxiety\nKeep on tryin' me\nI feel it quietly\nTryin' to silence me, yeah",
+        "answer": "[Doechii] Anxiety",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "한국 대사 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "",
+        "answer": "[지붕뚫고 하이킥] 이 빵꾸똥꾸야",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "",
+        "answer": "[범죄도시] 진실의 방으로",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "",
+        "answer": "[타짜] 난 딴 돈의 반만 가져가",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "",
+        "answer": "[태조 왕건] 누구인가, 지금 누가 기침 소리를 내었어",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "",
+        "answer": "[사랑했나봐] 예나, 선정이 딸이에요",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "해외 대사 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "",
+        "answer": "[Avangers: End Game] I'm iron man",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "",
+        "answer": "[Star Wars Episode V: The Empire Strikes Back] I'm your father.",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "",
+        "answer": "[Harry Potter] Dobby is free.",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "",
+        "answer": "[Terminator] I'll be back",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "",
+        "answer": "[Lord of the Rings: The Return of the King] My precious",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "한국 인물 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "",
+        "answer": "유재석",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "",
+        "answer": "방탄소년단",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "",
+        "answer": "블랙핑크",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "",
+        "answer": "아이유",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "",
+        "answer": "마동석",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "해외 인물 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "",
+        "answer": "Ariana Grande-Butera",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "",
+        "answer": "Taylor Alison Swift",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "",
+        "answer": "Michael Joseph Jackson",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "",
+        "answer": "Michael Jeffrey Jordan",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "",
+        "answer": "Bruce Lee",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "한국 상식 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "한국의 전통 의상은?",
+        "answer": "What is the name of the traditional Korean clothing?",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "한국의 대표적인 발효 음식으로, 배추나 무를 양념에 절여 만든 음식은?",
+        "answer": "What is the famous Korean fermented dish made by seasoning and preserving cabbage or radish?",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "조선의 4대 왕으로, 한글을 창제한 인물은?",
+        "answer": "Who is the 4th king of Joseon Dynasty and the creator of Hangul?",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "한국의 국가 전화번호는?",
+        "answer": "What is the country calling code for South Korea?",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "대한민국에서 가장 동쪽에 위치한 섬은?",
+        "answer": "What is the easternmost island in South Korea?",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "해외 문화 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "[러시아] 러시아의 전통 인형으로, 여러 개의 인형이 겹겹이 들어있는 나무 인형은?",
+        "answer": "[Russia] What is the name of the traditional Russian wooden doll that contains smaller dolls nested inside?",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "[미국] 미국에서 가장 유명한 전통적인 가을 축제로, 호박을 조각하며 유령 분장을 하는 행사는?",
+        "answer": "[USA] What is the most famous traditional fall festival in the United States where people carve pumpkins and dress up as ghosts or monsters?",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "[러시아] [중국] 러시아와 중국을 잇는 세계에서 가장 긴 철도는?",
+        "answer": "[Russia] [China] What is the name of the world’s longest railway that connects Russia and China?",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "[영국] 영국 런던에 위치한 왕실의 거주지는?",
+        "answer": "[United Kingdom] What is the name of the royal residence located in London, England?",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "[그리스] 고대 그리스에서 시작된 국제적인 스포츠 대회의 이름은?",
+        "answer": "[Greece] What is the name of the international sports competition that originated in ancient Greece?",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "수도 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "한국",
+        "answer": "South Korea",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "일본",
+        "answer": "Japan",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "중국",
+        "answer": "China",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "태국",
+        "answer": "Thailand",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "베트남",
+        "answer": "Vietnam",
+        "answered": false
+      }
+    ]
+  },
+  {
+    "name": "국기 퀴즈",
+    "questions": [
+      {
+        "value": 10,
+        "question": "",
+        "answer": "일본",
+        "answered": false
+      },
+      {
+        "value": 20,
+        "question": "",
+        "answer": "베트남",
+        "answered": false
+      },
+      {
+        "value": 30,
+        "question": "",
+        "answer": "러시아",
+        "answered": false
+      },
+      {
+        "value": 40,
+        "question": "",
+        "answer": "중국",
+        "answered": false
+      },
+      {
+        "value": 50,
+        "question": "",
+        "answer": "대한민국",
+        "answered": false
+      }
+    ]
+  }
+]
