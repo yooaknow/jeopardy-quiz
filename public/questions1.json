@@ -76,69 +76,79 @@
         "value": 10,
         "question": "",
         "answer": "[지붕뚫고 하이킥] 이 빵꾸똥꾸야",
+        "image": "빵꾸똥꾸야.png",
         "answered": false
       },
       {
         "value": 20,
         "question": "",
         "answer": "[범죄도시] 진실의 방으로",
+        "image": "진실의_방으로.png",
         "answered": false
       },
       {
         "value": 30,
         "question": "",
         "answer": "[타짜] 난 딴 돈의 반만 가져가",
+        "image": "난_딴_돈의.png",
         "answered": false
       },
       {
         "value": 40,
         "question": "",
-        "answer": "[태조 왕건] 누구인가, 지금 누가 기침 소리를 내었어",
+        "answer": "[궁예] 누구인가, 지금 누가 기침 소리를 내었어",
+        "image": "누구인가.png",
         "answered": false
       },
       {
         "value": 50,
         "question": "",
         "answer": "[사랑했나봐] 예나, 선정이 딸이에요",
+        "image": "예나_선정이.png",
         "answered": false
       }
     ]
   },
   {
     "name": "해외 대사 퀴즈",
-    "questions": [
-      {
-        "value": 10,
-        "question": "",
-        "answer": "[Avangers: End Game] I'm iron man",
-        "answered": false
-      },
-      {
-        "value": 20,
-        "question": "",
-        "answer": "[Star Wars Episode V: The Empire Strikes Back] I'm your father.",
-        "answered": false
-      },
-      {
-        "value": 30,
-        "question": "",
-        "answer": "[Harry Potter] Dobby is free.",
-        "answered": false
-      },
-      {
-        "value": 40,
-        "question": "",
-        "answer": "[Terminator] I'll be back",
-        "answered": false
-      },
-      {
-        "value": 50,
-        "question": "",
-        "answer": "[Lord of the Rings: The Return of the King] My precious",
-        "answered": false
-      }
-    ]
-  },
+   "questions": [
+    {
+      "value": 10,
+      "question": "",
+      "answer": "[Avangers: End Game] I'm iron man",
+      "image": "i_am_iron.png",
+      "answered": false
+    },
+    {
+      "value": 20,
+      "question": "",
+      "answer": "[Star Wars Episode V: The Empire Strikes Back] I'm your father.",
+      "image": "i_am_your_father.png",
+      "answered": false
+    },
+    {
+      "value": 30,
+      "question": "",
+      "answer": "[Harry Potter] Dobby is free.",
+      "image": "dobby_is_free.png",
+      "answered": false
+    },
+    {
+      "value": 40,
+      "question": "",
+      "answer": "[Terminator] I'll be back",
+      "image": "ill_be_back.png",
+      "answered": false
+    },
+    {
+      "value": 50,
+      "question": "",
+      "answer": "[Lord of the Rings: The Return of the King] My precious",
+      "image": "my_precious.png",
+      "answered": false
+    }
+  ]
+},
   {
     "name": "한국 인물 퀴즈",
     "questions": [
@@ -146,31 +156,36 @@
         "value": 10,
         "question": "",
         "answer": "유재석",
+        "image": "유재석.png",
         "answered": false
       },
       {
         "value": 20,
         "question": "",
         "answer": "방탄소년단",
+        "image": "BTS.png",
         "answered": false
       },
       {
         "value": 30,
         "question": "",
         "answer": "블랙핑크",
+        "image": "블랙핑크.png",
         "answered": false
       },
       {
         "value": 40,
         "question": "",
         "answer": "아이유",
+        "image": "아이유.png",
         "answered": false
       },
       {
-        "value": 50,
-        "question": "",
-        "answer": "마동석",
-        "answered": false
+      "value": 50,
+      "question": "",
+      "answer": "마동석",
+      "image": "마동석.png",
+      "answered": false
       }
     ]
   },
@@ -181,30 +196,35 @@
         "value": 10,
         "question": "",
         "answer": "Ariana Grande-Butera",
+        "image": "아리아나_그란데.png",
         "answered": false
       },
       {
         "value": 20,
         "question": "",
         "answer": "Taylor Alison Swift",
+        "image": "테일러_스위프트.png",
         "answered": false
       },
       {
         "value": 30,
         "question": "",
         "answer": "Michael Joseph Jackson",
+        "image": "마이클_잭슨.png",
         "answered": false
       },
       {
         "value": 40,
         "question": "",
         "answer": "Michael Jeffrey Jordan",
+        "image": "마이클_조던.png",
         "answered": false
       },
       {
         "value": 50,
         "question": "",
         "answer": "Bruce Lee",
+        "image": "이소룡.png",
         "answered": false
       }
     ]
@@ -214,32 +234,32 @@
     "questions": [
       {
         "value": 10,
-        "question": "한국의 전통 의상은?",
-        "answer": "What is the name of the traditional Korean clothing?",
+        "question": "한국의 전통 의상은?\nWhat is the name of the traditional Korean clothing?",
+        "answer": "한복 (Hanbok)",
         "answered": false
       },
       {
         "value": 20,
-        "question": "한국의 대표적인 발효 음식으로, 배추나 무를 양념에 절여 만든 음식은?",
-        "answer": "What is the famous Korean fermented dish made by seasoning and preserving cabbage or radish?",
+        "question": "한국의 대표적인 발효 음식으로, 배추나 무를 양념에 절여 만든 음식은?\nWhat is the famous Korean fermented dish made by seasoning and preserving cabbage or radish?",
+        "answer": "김치 (Kimchi)",
         "answered": false
       },
       {
         "value": 30,
-        "question": "조선의 4대 왕으로, 한글을 창제한 인물은?",
-        "answer": "Who is the 4th king of Joseon Dynasty and the creator of Hangul?",
+        "question": "조선의 4대 왕으로, 한글을 창제한 인물은?\nWho is the 4th king of Joseon Dynasty and the creator of Hangul?",
+        "answer": "세종대왕 (King Sejong)",
         "answered": false
       },
       {
         "value": 40,
-        "question": "한국의 국가 전화번호는?",
-        "answer": "What is the country calling code for South Korea?",
+        "question": "한국의 국가 전화번호는?\nWhat is the country calling code for South Korea?",
+        "answer": "+82",
         "answered": false
       },
       {
         "value": 50,
-        "question": "대한민국에서 가장 동쪽에 위치한 섬은?",
-        "answer": "What is the easternmost island in South Korea?",
+        "question": "대한민국에서 가장 동쪽에 위치한 섬은?\nWhat is the easternmost island in South Korea?",
+        "answer": "독도 (Dokdo)",
         "answered": false
       }
     ]
@@ -249,32 +269,32 @@
     "questions": [
       {
         "value": 10,
-        "question": "[러시아] 러시아의 전통 인형으로, 여러 개의 인형이 겹겹이 들어있는 나무 인형은?",
-        "answer": "[Russia] What is the name of the traditional Russian wooden doll that contains smaller dolls nested inside?",
+        "question": "[러시아] 러시아의 전통 인형으로, 여러 개의 인형이 겹겹이 들어있는 나무 인형은?\n[Russia] What is the name of the traditional Russian wooden doll that contains smaller dolls nested inside?",
+        "answer": "마트료시카 (Matryoshka doll)",
         "answered": false
       },
       {
         "value": 20,
-        "question": "[미국] 미국에서 가장 유명한 전통적인 가을 축제로, 호박을 조각하며 유령 분장을 하는 행사는?",
-        "answer": "[USA] What is the most famous traditional fall festival in the United States where people carve pumpkins and dress up as ghosts or monsters?",
+        "question": "[미국] 미국에서 가장 유명한 전통적인 가을 축제로, 호박을 조각하며 유령 분장을 하는 행사는?\n[USA] What is the most famous traditional fall festival in the United States where people carve pumpkins and dress up as ghosts or monsters?",
+        "answer": "할로윈 (Halloween)",
         "answered": false
       },
       {
         "value": 30,
-        "question": "[러시아] [중국] 러시아와 중국을 잇는 세계에서 가장 긴 철도는?",
-        "answer": "[Russia] [China] What is the name of the world’s longest railway that connects Russia and China?",
+        "question": "[러시아] [중국] 러시아와 중국을 잇는 세계에서 가장 긴 철도는?\n[Russia] [China] What is the name of the world’s longest railway that connects Russia and China?",
+        "answer": "시베리아 횡단 철도 (Trans-Siberian Railway)",
         "answered": false
       },
       {
         "value": 40,
-        "question": "[영국] 영국 런던에 위치한 왕실의 거주지는?",
-        "answer": "[United Kingdom] What is the name of the royal residence located in London, England?",
+        "question": "[영국] 영국 런던에 위치한 왕실의 거주지는?\n[United Kingdom] What is the name of the royal residence located in London, England?",
+        "answer": "버킹엄 궁전 (Buckingham Palace)",
         "answered": false
       },
       {
         "value": 50,
-        "question": "[그리스] 고대 그리스에서 시작된 국제적인 스포츠 대회의 이름은?",
-        "answer": "[Greece] What is the name of the international sports competition that originated in ancient Greece?",
+        "question": "[그리스] 고대 그리스에서 시작된 국제적인 스포츠 대회의 이름은?\n[Greece] What is the name of the international sports competition that originated in ancient Greece?",
+        "answer": "올림픽 (Olympics)",
         "answered": false
       }
     ]
@@ -284,32 +304,32 @@
     "questions": [
       {
         "value": 10,
-        "question": "한국",
-        "answer": "South Korea",
+        "question": "한국의 수도는 어디인가요?\nWhat is the capital of South Korea?",
+        "answer": "서울 (Seoul)",
         "answered": false
       },
       {
         "value": 20,
-        "question": "일본",
-        "answer": "Japan",
+        "question": "일본의 수도는 어디인가요?\nWhat is the capital of Japan?",
+        "answer": "도쿄 (Tokyo)",
         "answered": false
       },
       {
         "value": 30,
-        "question": "중국",
-        "answer": "China",
+        "question": "중국의 수도는 어디인가요?\nWhat is the capital of China?",
+        "answer": "베이징 (Beijing)",
         "answered": false
       },
       {
         "value": 40,
-        "question": "태국",
-        "answer": "Thailand",
+        "question": "태국의 수도는 어디인가요?\nWhat is the capital of Thailand?",
+        "answer": "방콕 (Bangkok)",
         "answered": false
       },
       {
         "value": 50,
-        "question": "베트남",
-        "answer": "Vietnam",
+        "question": "베트남의 수도는 어디인가요?\nWhat is the capital of Vietnam?",
+        "answer": "하노이 (Hanoi)",
         "answered": false
       }
     ]
@@ -321,30 +341,35 @@
         "value": 10,
         "question": "",
         "answer": "일본",
+        "image": "일본.png",
         "answered": false
       },
       {
         "value": 20,
         "question": "",
         "answer": "베트남",
+        "image": "베트남.png",
         "answered": false
       },
       {
         "value": 30,
         "question": "",
         "answer": "러시아",
+        "image": "러시아.png",
         "answered": false
       },
       {
         "value": 40,
         "question": "",
         "answer": "중국",
+        "image": "중국.png",
         "answered": false
       },
       {
         "value": 50,
         "question": "",
         "answer": "대한민국",
+        "image": "한국.png",
         "answered": false
       }
     ]
