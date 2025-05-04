@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('./fonts/GmarketSansLight.otf') format('opentype');
+    font-weight: 300;
+  }
+  
+ 
+  
+  
+  body {
+    font-family: 'GmarketSans', sans-serif;
+  }
+  
