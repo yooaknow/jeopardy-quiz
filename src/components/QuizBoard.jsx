@@ -119,21 +119,29 @@ export default function QuizBoard() {
   {showScorePanel && (
     <div className="absolute top-12 right-0 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border-2 border-yellow-500 z-50 w-72">
       <h3 className="font-extrabold text-red-800 text-base text-center mb-3">
-        🏆 조별 점수판
+        🏆 조별 점수판 🏆
       </h3>
       <ul className="space-y-2 text-sm font-semibold text-red-700">
-        {sortedScores.map(({ team, score }) => (
-          <li key={team} className="flex items-center gap-2">
-            <span className="w-10 text-left">{team}조</span>
-            <div className="flex-1 bg-yellow-200 rounded-full overflow-hidden">
-              <div
-                className="bg-green-500 h-3"
-                style={{ width: `${(score / maxScore) * 100}%` }}
-              ></div>
-            </div>
-            <span className="w-12 text-black text-right">{score}점</span>
-          </li>
-        ))}
+      {sortedScores.map(({ team, score }, index) => {
+  let barColor = "bg-green-500";
+  if (index === 0) barColor = "bg-red-500";     // 1등 - 빨강
+  else if (index === 1) barColor = "bg-orange-400"; // 2등 - 주황
+  else if (index === 2) barColor = "bg-yellow-300"; // 3등 - 노랑
+
+  return (
+    <li key={team} className="flex items-center gap-2">
+      <span className="w-10 text-left">{team}조</span>
+      <div className="flex-1 bg-yellow-200 rounded-full overflow-hidden">
+        <div
+          className={`${barColor} h-3`}
+          style={{ width: `${(score / maxScore) * 100}%` }}
+        ></div>
+      </div>
+      <span className="w-12 text-black text-right">{score}점</span>
+    </li>
+  );
+})}
+
       </ul>
     </div>
   )}
