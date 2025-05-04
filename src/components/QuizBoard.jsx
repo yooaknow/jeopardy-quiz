@@ -240,13 +240,14 @@ export default function QuizBoard() {
 
         </div>
       )}
-      <p
-        className={`whitespace-pre-line font-bold ${
-          showAnswer ? "text-xl sm:text-2xl text-green-800" : "text-base sm:text-lg"
-        } min-h-[60px]`}
-      >
-        {showAnswer ? currentQuestion.answer : currentQuestion.question}
-      </p>
+    <p
+  className={`whitespace-pre-line font-bold text-2xl sm:text-3xl text-center leading-relaxed ${
+    showAnswer ? "text-green-800" : "text-red-900"
+  } min-h-[80px]`}
+>
+  {showAnswer ? currentQuestion.answer : currentQuestion.question}
+</p>
+
 
       {showAnswer ? (
         <button
