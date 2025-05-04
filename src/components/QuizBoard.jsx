@@ -219,7 +219,8 @@ export default function QuizBoard() {
     className="fixed inset-0 flex items-center justify-center z-[1000] px-4"
     style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", backdropFilter: "blur(4px)" }}
   >
-    <div className="relative bg-yellow-100 text-red-900 p-8 sm:p-12 rounded-3xl border-4 border-yellow-500 shadow-2xl max-w-2xl w-full text-center">
+    <div className="relative bg-yellow-100 text-red-900 p-8 sm:p-12 rounded-3xl border-4 border-yellow-500 shadow-2xl max-w-4xl w-full text-center">
+
     <button
   onClick={handleClose}
   className="absolute top-2 right-3 text-lg text-gray-500 hover:text-gray-700 font-bold transition"
@@ -232,10 +233,11 @@ export default function QuizBoard() {
       {currentQuestion.image && imageMap[currentQuestion.image] && (
         <div className="flex justify-center mb-4">
           <img
-            src={imageMap[currentQuestion.image]}
-            alt="문제 이미지"
-            className="max-h-64 object-contain"
-          />
+  src={imageMap[currentQuestion.image]}
+  alt="문제 이미지"
+  className="max-h-[400px] object-contain"
+/>
+
         </div>
       )}
       <p
