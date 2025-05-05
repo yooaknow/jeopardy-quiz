@@ -152,15 +152,17 @@ export default function QuizBoard() {
         })}
       </ul>
 
-      {/* 🎉 끝내기 버튼 */}
-      <div className="mt-4 flex justify-end">
-        <button
-          className="px-3 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl shadow-md transition"
-          onClick={handleFinishQuiz}
-        >
-          🎉 퀴즈 끝내기
-        </button>
-      </div>
+{/* 🎉 끝내기 버튼 */}
+<div className="mt-4 flex justify-end">
+  <button
+    className="px-2.5 py-1 text-xs bg-gray-100 hover:bg-gray-200 text-[#4B3F28] font-medium rounded-md shadow-sm transition"
+    onClick={handleFinishQuiz}
+  >
+    퀴즈 종료
+  </button>
+</div>
+
+
     </div>
   )}
 </div>
