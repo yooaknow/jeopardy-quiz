@@ -103,9 +103,12 @@ export default function QuizBoard() {
       .map((score, index) => ({ team: index + 1, score }))
       .sort((a, b) => b.score - a.score);
     const winner = sortedScores[0];
-    navigate(`/winner?team=${winner.team}&score=${winner.score}`);
+    const second = sortedScores[1];
+    const third = sortedScores[2];
+  
+    navigate(`/winner?team=${winner.team}&score=${winner.score}&secondTeam=${second.team}&secondScore=${second.score}&thirdTeam=${third.team}&thirdScore=${third.score}`);
   };
-
+  
   const sortedScores = [...teamScores]
     .map((score, index) => ({ team: index + 1, score }))
     .sort((a, b) => b.score - a.score);
