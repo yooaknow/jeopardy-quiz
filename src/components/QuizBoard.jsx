@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/게임배경.png";
 import "../index.css";
 
@@ -58,6 +59,7 @@ const imageMap = {
 };
 
 export default function QuizBoard() {
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -67,7 +69,6 @@ export default function QuizBoard() {
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [pendingQuestion, setPendingQuestion] = useState(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-
 
   useEffect(() => {
     fetch("/questions1.json")
@@ -97,6 +98,14 @@ export default function QuizBoard() {
     }
   };
 
+  const handleFinishQuiz = () => {
+    const sortedScores = [...teamScores]
+      .map((score, index) => ({ team: index + 1, score }))
+      .sort((a, b) => b.score - a.score);
+    const winner = sortedScores[0];
+    navigate(`/winner?team=${winner.team}&score=${winner.score}`);
+  };
+
   const sortedScores = [...teamScores]
     .map((score, index) => ({ team: index + 1, score }))
     .sort((a, b) => b.score - a.score);
@@ -108,7 +117,7 @@ export default function QuizBoard() {
       className="min-h-screen flex flex-col items-center justify-start bg-cover bg-center pt-2 px-4 pb-6 md:pt-4 md:px-8 md:pb-10 font-sans text-[#4B3F28]"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-     <div className="w-full max-w-6xl relative flex justify-end mb-3 md:mb-5">
+      <div className="w-full max-w-6xl relative flex justify-end mb-6">
   <button
     className="px-4 py-2 text-base bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition"
     onClick={() => setShowScorePanel(!showScorePanel)}
@@ -117,35 +126,45 @@ export default function QuizBoard() {
   </button>
 
   {showScorePanel && (
-    <div className="absolute top-12 right-0 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border-2 border-yellow-500 z-50 w-72">
+    <div className="absolute top-full mt-2 right-0 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border-2 border-yellow-500 z-50 w-72">
       <h3 className="font-extrabold text-red-800 text-base text-center mb-3">
         🏆 조별 점수판 🏆
       </h3>
       <ul className="space-y-2 text-sm font-semibold text-red-700">
-      {sortedScores.map(({ team, score }, index) => {
-  let barColor = "bg-green-500";
-  if (index === 0) barColor = "bg-red-500";     // 1등 - 빨강
-  else if (index === 1) barColor = "bg-orange-400"; // 2등 - 주황
-  else if (index === 2) barColor = "bg-yellow-300"; // 3등 - 노랑
+        {sortedScores.map(({ team, score }, index) => {
+          let barColor = "bg-green-500";
+          if (index === 0) barColor = "bg-red-500";
+          else if (index === 1) barColor = "bg-orange-400";
+          else if (index === 2) barColor = "bg-yellow-300";
 
-  return (
-    <li key={team} className="flex items-center gap-2">
-      <span className="w-10 text-left">{team}조</span>
-      <div className="flex-1 bg-yellow-200 rounded-full overflow-hidden">
-        <div
-          className={`${barColor} h-3`}
-          style={{ width: `${(score / maxScore) * 100}%` }}
-        ></div>
-      </div>
-      <span className="w-12 text-black text-right">{score}점</span>
-    </li>
-  );
-})}
-
+          return (
+            <li key={team} className="flex items-center gap-2">
+              <span className="w-10 text-left">{team}조</span>
+              <div className="flex-1 bg-yellow-200 rounded-full overflow-hidden">
+                <div
+                  className={`${barColor} h-3`}
+                  style={{ width: `${(score / maxScore) * 100}%` }}
+                ></div>
+              </div>
+              <span className="w-12 text-black text-right">{score}점</span>
+            </li>
+          );
+        })}
       </ul>
+
+      {/* 🎉 끝내기 버튼 */}
+      <div className="mt-4 flex justify-end">
+        <button
+          className="px-3 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl shadow-md transition"
+          onClick={handleFinishQuiz}
+        >
+          🎉 퀴즈 끝내기
+        </button>
+      </div>
     </div>
   )}
 </div>
+
 
 
 
