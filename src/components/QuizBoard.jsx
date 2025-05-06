@@ -70,6 +70,10 @@ export default function QuizBoard() {
   const [pendingQuestion, setPendingQuestion] = useState(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [isInternational, setIsInternational] = useState(false);
+  const [showAdjustModal, setShowAdjustModal] = useState(false);
+  const [adjustTeam, setAdjustTeam] = useState(0); // 0번 인덱스 = 1조
+  const [adjustValue, setAdjustValue] = useState(0);
+
 
   useEffect(() => {
     fetch("/questions1.json")
@@ -104,6 +108,8 @@ export default function QuizBoard() {
     }
   };
 
+  
+
   const handleFinishQuiz = () => {
     const sortedScores = [...teamScores]
       .map((score, index) => ({ team: index + 1, score }))
@@ -126,7 +132,18 @@ export default function QuizBoard() {
       className="min-h-screen flex flex-col items-center justify-start bg-cover bg-center pt-2 px-4 pb-6 md:pt-4 md:px-8 md:pb-10 font-sans text-[#4B3F28]"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="w-full max-w-6xl relative flex justify-end mb-6">
+  <div className="w-full max-w-6xl relative flex justify-end mb-0 gap-2">
+
+  <div className="w-full max-w-6xl relative flex justify-end mt-2 mb-6 gap-2">
+
+
+      <button
+    className="px-4 py-2 text-base bg-blue-500 text-white font-bold rounded-lg shadow hover:bg-blue-600 transition"
+    onClick={() => setShowAdjustModal(true)}
+  >
+    ✏️ 점수 조정
+  </button>
+
   <button
     className="px-4 py-2 text-base bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition"
     onClick={() => setShowScorePanel(!showScorePanel)}
@@ -134,8 +151,11 @@ export default function QuizBoard() {
     📊 점수 집계 보기
   </button>
 
+</div>
+
+
   {showScorePanel && (
-    <div className="absolute top-full mt-2 right-0 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border-2 border-yellow-500 z-50 w-72">
+    <div className="absolute top-14 right-0 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border-2 border-yellow-500 z-50 w-72">
       <h3 className="font-extrabold text-red-800 text-base text-center mb-3">
         🏆 조별 점수판 🏆
       </h3>
@@ -305,6 +325,58 @@ export default function QuizBoard() {
     </div>
   </div>
 )}
+{showAdjustModal && (
+  <div className="fixed inset-0 flex items-center justify-center z-[1003] px-4" style={{ backgroundColor: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}>
+    <div className="bg-white p-6 rounded-3xl border-4 border-blue-500 shadow-2xl w-full max-w-sm text-center">
+      <h3 className="text-blue-700 font-bold text-lg mb-4">점수 수동 조정</h3>
+
+      <div className="mb-4">
+        <label className="block text-sm font-semibold text-blue-800 mb-1">조 선택</label>
+        <select
+          value={adjustTeam}
+          onChange={(e) => setAdjustTeam(Number(e.target.value))}
+          className="w-full p-2 border border-blue-300 rounded"
+        >
+          {teamScores.map((_, i) => (
+            <option key={i} value={i}>{i + 1}조</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="mb-4">
+        <label className="block text-sm font-semibold text-blue-800 mb-1">점수 입력 (예: 10, -5)</label>
+        <input
+  type="number"
+  value={adjustValue}
+  onChange={(e) => setAdjustValue(e.target.value === '' ? '' : Number(e.target.value))}
+
+  className="w-full p-2 border border-blue-300 rounded"
+/>
+
+      </div>
+
+      <button
+        onClick={() => {
+          const newScores = [...teamScores];
+          newScores[adjustTeam] += adjustValue;
+          setTeamScores(newScores);
+          setShowAdjustModal(false);
+          setAdjustValue(0);
+        }}
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition"
+      >
+        ✅ 조정 완료
+      </button>
+
+      <button
+        onClick={() => setShowAdjustModal(false)}
+        className="w-full mt-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 rounded-lg transition"
+      >
+        ❌ 취소
+      </button>
+    </div>
+  </div>
+)}
 
 
       {showAssignModal && (
@@ -351,6 +423,8 @@ export default function QuizBoard() {
 >
   ✅ 점수 부여
 </button>
+
+
 
 <button
   className="w-full py-3 mt-3 bg-pink-100 hover:bg-pink-200 text-pink-700 font-semibold text-base rounded-xl shadow-sm transition"
