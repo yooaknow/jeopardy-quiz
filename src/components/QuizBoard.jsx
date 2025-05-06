@@ -69,6 +69,7 @@ export default function QuizBoard() {
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [pendingQuestion, setPendingQuestion] = useState(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [isInternational, setIsInternational] = useState(false);
 
   useEffect(() => {
     fetch("/questions1.json")
@@ -87,12 +88,17 @@ export default function QuizBoard() {
     setShowAnswer(false);
     setSelectedTeam(null);
     setShowAssignModal(false);
+    setIsInternational(false); 
   };
 
   const handleScoreAssign = () => {
     if (selectedTeam != null) {
       const newScores = [...teamScores];
-      newScores[selectedTeam] += currentQuestion.value;
+      let scoreToAdd = currentQuestion.value;
+      if (isInternational) {
+        scoreToAdd += 5;
+      }
+      newScores[selectedTeam] += scoreToAdd;
       setTeamScores(newScores);
       handleClose();
     }
@@ -105,7 +111,7 @@ export default function QuizBoard() {
     const winner = sortedScores[0];
     const second = sortedScores[1];
     const third = sortedScores[2];
-  
+
     navigate(`/winner?team=${winner.team}&score=${winner.score}&secondTeam=${second.team}&secondScore=${second.score}&thirdTeam=${third.team}&thirdScore=${third.score}`);
   };
   
@@ -323,6 +329,20 @@ export default function QuizBoard() {
                   {i + 1}조
                 </button>
               ))}
+            </div>
+
+             {/* ✅ 유학생 체크박스 */}
+             <div className="mt-4 flex items-center justify-center gap-2">
+              <input
+                type="checkbox"
+                id="international"
+                checked={isInternational}
+                onChange={(e) => setIsInternational(e.target.checked)}
+                className="w-4 h-4"
+              />
+              <label htmlFor="international" className="text-sm text-green-800 font-semibold">
+                5점 추가
+              </label>
             </div>
 
             <button
