@@ -369,11 +369,13 @@ export default function QuizBoard() {
       </button>
 
       <button
-        onClick={() => setShowAdjustModal(false)}
-        className="w-full mt-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 rounded-lg transition"
-      >
-        ❌ 취소
-      </button>
+  onClick={() => setShowAdjustModal(false)}
+  className="w-full py-2 mt-2 bg-pink-100 hover:bg-pink-200 text-pink-700 font-bold text-base rounded-lg shadow transition"
+>
+  ❌ 닫기
+</button>
+
+
     </div>
   </div>
 )}
